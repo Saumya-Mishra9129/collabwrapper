@@ -202,7 +202,7 @@ class CollabWrapperTestActivity(activity.Activity):
                 gbytes = stream.steal_as_bytes()
                 data = gbytes.get_data()
 
-                self._say('%.6f data %r\n' % (time.time(), data))
+                self._say('%.6f data %r\n' % (time.time(), data.decode('utf-8')))
 
             ft.connect('ready', on_ready_cb)
             ft.accept_to_memory()
